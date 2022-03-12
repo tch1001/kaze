@@ -22,6 +22,7 @@
 
 // OpenCV
 #include <opencv2/features2d/features2d.hpp>
+#include <opencv2/features2d.hpp>
 #include <opencv2/xfeatures2d.hpp>
 
 using namespace std;
@@ -130,7 +131,7 @@ int main(int argc, char *argv[]) {
 
   /* ************************************************************************* */
   // Detect SIFT Features
-  cv::Ptr<cv::xfeatures2d::SIFT> sift = cv::xfeatures2d::SIFT::create(2000, 3, 0.004, 10, 1.6);
+  cv::Ptr<cv::SIFT> sift = cv::SIFT::create(2000, 3, 0.004, 10, 1.6);
 
   t1 = cv::getTickCount();
 
